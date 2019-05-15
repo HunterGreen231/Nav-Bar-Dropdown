@@ -1,0 +1,139 @@
+body {
+    margin: 0;
+    .container {
+        .nav-bar {
+            background: black;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            a {
+                text-decoration: none;
+            }
+            .toggle-logo-wrappers {
+                display: flex;
+                align-items: center;
+                width: min-content;
+                height: 100%;
+                .toggle-wrapper {
+                    width: auto;
+                    display: flex;
+                    margin-left: 1em;
+                    height: 100%;
+                    .toggle {
+                        color: white;
+                        height: 100%;
+                        display: flex;
+                        align-items: center;
+                        i {
+                            padding-left: 1em;
+                            padding-right: 1em;
+                        }
+                    }
+                    .toggle:active {
+                        background: white;
+                        color: black;
+                    }
+                }
+                .logo-wrapper {
+                    display: flex;
+                    align-items: center;
+                    img {
+                        padding-left: 1em;
+                        padding-right: 3em;
+                        width: 10em;
+                        height: 100%;
+                    }
+                }
+            }
+            .links-wrappers {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                .links-wrapper-left, .links-wrapper-right{
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 48em) {
+    .container {
+        .nav-bar {
+            .toggle-logo-wrappers {
+                .toggle-wrapper {
+                    display: none!important;
+                }
+            }
+            .links-wrappers {
+                .links-wrapper-right {
+                    justify-content: flex-end;
+                }
+                .links-wrapper-right, .links-wrapper-left {
+                    display: flex!important;
+                    width: 100%;
+                    height: 100%;
+                    a:hover {
+                        background: lightslategray;
+                        color: black;
+                    }
+                    .link {
+                        display: flex;
+                        text-decoration: none;
+                        margin-right: 5em;
+                        letter-spacing: 1px;
+                        align-items: center;
+                        height: 100%;
+                        justify-content: center;
+                        width: auto;
+                        padding-left: 1em;
+                        padding-right: 1em;
+                        color: white;
+                        border-left: 1px solid white;
+                        border-right: 1px solid white;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 48em) {
+    .container {
+        .active {
+            display: block!important;
+            .toggle-logo-wrappers{
+                display: flex!important;
+            }
+            .links-wrappers {
+                display: block!important;
+                .links-wrapper-left, .links-wrapper-right {
+                    display: flex!important;
+                    width: 100%;
+                    flex-direction: column;
+                    background-color: black;
+                    .link {
+                    color: white;
+                    height: 100%;
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    letter-spacing: 1px;
+                    border-top: 1px solid white;
+                    }
+                    a:hover {
+                        background-color: lightslategray;
+                        color: black;
+                    }
+                }
+                .links-wrapper-left {
+                    height: 100px;
+                }
+                .links-wrapper-right {
+                    height: 50px;
+                }
+            }
+        }
+    }
+}

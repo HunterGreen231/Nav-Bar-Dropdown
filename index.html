@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="nav-bar">
+            <div class="toggle-logo-wrappers">
+                <div class="toggle-wrapper">
+                    <a href="#" class="toggle" id="navHamburger">
+                        <i class="fas fa-bars"></i>
+                    </a>
+                </div>
+                <div class="logo-wrapper">
+                    <img src="images/codePen-Logo.png" alt="image">
+                </div>
+            </div>
+            <div class="links-wrappers">
+                <div class="links-wrapper-left">
+                    <a href="#" class="link">link1</a>
+                    <a href="#" class="link">link2</a>
+                </div>
+                <div class="links-wrapper-right">
+                    <a href="#" class ="link">link3</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+    const navBar = document.querySelector('.nav-bar');
+
+    const navHamburger = document.querySelector('#navHamburger');
+    navHamburger.addEventListener('click', (e) => {
+        navBar.classList.toggle('active');
+    })
+</script>
+
+</html>
